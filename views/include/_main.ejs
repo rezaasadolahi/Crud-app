@@ -20,24 +20,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Reza</td>
-                        <td>example@gmail.com</td>
-                        <td>Male</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="/update-user" class="btn border-shadow update">
-                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                            </a>
-                            <a class="btn border-shadow delete">
-                                <span class="text-gradient"><i class="fas fa-times  "></i></span>
-                            </a>
-                        </td>
-                    </tr>
+                    <% users.map(item=>{ %>
+                        <tr>
+                            <td>
+                                <%= item._id %>
+                            </td>
+                            <td>
+                                <%= item.name %>
+                            </td>
+                            <td>
+                                <%= item.email %>
+                            </td>
+                            <td>
+                                <%= item.gender %>
+                            </td>
+                            <td>
+                                <%= item.status %>
+                            </td>
+                            <td>
+                                <a href="/update-user" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times  "></i></span>
+                                </a>
+                            </td>
+                        </tr>
+                        <% }) %>
                 </tbody>
             </table>
         </form>
         <!-- /Form handle -->
+        <!-- <p><%= users %></p> -->
     </div>
 </main>
