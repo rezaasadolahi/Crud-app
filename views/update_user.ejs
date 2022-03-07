@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add user</title>
+    <link rel="stylesheet" href="css/update-user.css">
+    <!-- CDN: font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- include header -->
+    <%- include('include/_header.ejs') %>
+        <!-- /include header -->
+
+        <main id="site-main">
+            <div class="container">
+                <div class="box-nav d-flex justify-between">
+                    <section id="filter">
+                        <a href="/"><i class="fas fa-angle-double-left"></i>&nbsp; All User</a>
+                    </section>
+                </div>
+                <div class="form-title text-center">
+                    <h2 class="text-dark">Update User</h2>
+                    <span class="text-light">User the below from to update an accoubt</span>
+                </div>
+
+
+                <!-- Form handle -->
+                <form method="post" id="update_user" autocomplete="off">
+                    <div class="new-user">
+                        <div class="form-group">
+                            <label for="name" class="text-light">Name</label>
+                            <input type="text" name="name" id="name" value="" placeholder="Mark Stoenis">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="text-light">Email</label>
+                            <input type="text" name="email" id="email" value="" placeholder="example@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender" class="text-light">Gender</label>
+                            <div class="radio inline">
+                                <input type="radio" name="gender" id="radio-2" value="Male">
+                                <label for="radio-2" class="radio-label">Male</label>
+                            </div>
+                            <div class="radio inline">
+                                <input type="radio" name="gender" id="radio-3" value="Female">
+                                <label for="radio-3" class="radio-label">Female</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender" class="text-light">Status</label>
+                            <div class="radio inline">
+                                <input type="radio" name="status" id="radio-4" value="Active">
+                                <label for="radio-4" class="radio-label">Active</label>
+                            </div>
+                            <div class="radio inline">
+                                <input type="radio" name="status" id="radio-5" value="Inactive">
+                                <label for="radio-5" class="radio-label">Inactive</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn text-dark update">Save</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- /Form handle -->
+            </div>
+        </main>
+</body>
+
+</html>
