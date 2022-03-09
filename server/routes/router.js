@@ -2,7 +2,11 @@ const express = require('express')
 const route = express.Router()
 const services = require('../services/render')
 const controller = require('../controller/controller')
+const methodOverride = require('method-override')
 
+
+//* Shabih sazi PUT va DELETE baraye form haye folder views
+route.use(methodOverride('methodOverride'))
 
 
 
