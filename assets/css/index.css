@@ -26,6 +26,12 @@ a {
     font-family: 'PT Sans', sans-serif;
 }
 
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
 .container {
     width: 100%;
     height: auto;
@@ -118,7 +124,11 @@ table {
     padding: 0.75em;
     vertical-align: top;
     text-align: center;
-    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    padding: 0.98em 0 0 0;
 }
 
 .table td>a.btn {
@@ -127,6 +137,27 @@ table {
     margin: 0 0.2em;
     box-shadow: #e9ecef 0 2px 4px;
     margin: 0 0.5em;
+}
+
+#td-delete-update {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 0);
+    padding: 0.50em 0 0.85em 0;
+}
+
+#td-delete-update button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    box-shadow: 1px 3px 10px #e9ecef;
+    cursor: pointer;
+}
+
+tr:hover #td-delete-update button {
+    box-shadow: none;
+    border: 1px solid var(--border-btn);
 }
 
 .table tbody tr {

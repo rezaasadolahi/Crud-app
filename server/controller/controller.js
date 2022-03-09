@@ -95,7 +95,8 @@ exports.delete = (req, res) => {
             if (!data) {
                 res.status(404).send({ message: `Can not update user with ${id}. Maybe user not found` })
             } else {
-                res.send({ message: "User was delete successfully!" })
+                // res.send({ message: "User was delete successfully!" })
+                res.redirect('/')
             }
         })
         .catch(err => {

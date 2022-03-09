@@ -37,13 +37,15 @@
                             <td>
                                 <%= item.status %>
                             </td>
-                            <td>
+                            <td id="td-delete-update">
                                 <a href="/update-user?id=<%= item._id %>" class="btn border-shadow update">
                                     <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                                 </a>
-                                <a class="btn border-shadow delete">
-                                    <span class="text-gradient"><i class="fas fa-times  "></i></span>
-                                </a>
+                                <form action="/api/users/<%= item._id %>?methodOverride=DELETE" method="post">
+                                    <button>
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                         <% }) %>
